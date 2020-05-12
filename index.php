@@ -59,6 +59,47 @@
 			?>
 		</tbody>
 	</table>
+	<a href="php_action/oop.php"><button type="button">go oop</button></a>
+	<a href="php_action/vd.php"><button type="button">go vd</button></a>
+<?php
+    $cars=array("Volvo","BMW","Toyota");
+	echo $cars[0]. "</br>";
+	array_push($cars,"toyota");
+	echo implode('', $cars);
+	foreach($cars as $car){
+		echo $car. "</br>";
+	}
+	
+	$dong = array("volvo" => 3, "bmw" => 2, "toyota" => 1);
+	foreach($dong as $key => $value){
+		echo $value. "o vi tri" .$key. "<br/>";
+	}
+	$diemdanhgia = array( 
+		"volvo" => array
+		(
+			"mausac" => 7,
+			"kieudang" => 8,  
+			"tocdo" => 9
+		),
+	
+		"bmw" => array
+		(
+			"mausac" => 7,
+			"kieudang" => 9,
+			"tocdo" => 6
+		),
+	
+		"toyota" => array
+		(
+			"mausac" => 8,
+			"kieudang" => 8,
+			"tocdo" => 9
+		)
+		
+	);
+	echo $diemdanhgia["bmw"]["mausac"];
+	
+?>
 </div>
 
 </body>
